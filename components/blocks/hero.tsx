@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../ui/button";
+import CTASection from "../custom/cta-section";
 
 export default function Hero() {
   return (
@@ -48,19 +48,12 @@ export default function Hero() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="min-w-[200px] tracking-wider">
-            View Portfolio
-          </Button>
-          <Button variant="outline" size="lg" className="min-w-[200px] tracking-wider">
-            Book a Session
-          </Button>
-        </div>
-
-        {/* Trust line */}
-        <p className="text-muted-foreground/60 text-xs tracking-widest uppercase mt-8">
-          Editorial &bull; Portraits &bull; Weddings &bull; Commercial
-        </p>
+        <CTASection
+          primaryLabel="View Portfolio"
+          secondaryLabel="Book a Session"
+          subtitle="Editorial · Portraits · Weddings · Commercial"
+          buttonClassName="min-w-[200px]"
+        />
       </div>
 
       {/* Bottom fade */}
