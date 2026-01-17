@@ -2,7 +2,7 @@ import CTASection from "../custom/cta-section";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden mt-12 md:mt-2">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden mt-12 md:mt-8">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
 
