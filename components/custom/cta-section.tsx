@@ -1,8 +1,14 @@
+import Link from "next/link";
 import { Button } from "../ui/button";
 
+interface LinkProps {
+  label: string,
+  url: string,
+  targetBlank?: boolean,
+}
 interface CTASectionProps {
-  primaryLabel: string;
-  secondaryLabel: string;
+  primary: LinkProps;
+  secondary: LinkProps;
   subtitle?: string;
   primaryVariant?: "default" | "outline";
   secondaryVariant?: "default" | "outline";
@@ -11,8 +17,8 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  primaryLabel,
-  secondaryLabel,
+  primary,
+  secondary,
   subtitle,
   primaryVariant = "default",
   secondaryVariant = "outline",
@@ -26,15 +32,29 @@ export default function CTASection({
           variant={primaryVariant}
           size="lg"
           className={`${buttonClassName} tracking-widest`}
+          asChild
         >
-          {primaryLabel}
+          <Link
+            href={primary.url}
+            target={primary.targetBlank ? "_blank" : undefined}
+            rel={primary.targetBlank ? "noopener noreferrer" : undefined}
+          >
+            {primary.label}
+          </Link>
         </Button>
         <Button
           variant={secondaryVariant}
           size="lg"
           className={`${buttonClassName} tracking-widest`}
+          asChild
         >
-          {secondaryLabel}
+          <Link
+            href={secondary.url}
+            target={secondary.targetBlank ? "_blank" : undefined}
+            rel={secondary.targetBlank ? "noopener noreferrer" : undefined}
+          >
+            {secondary.label}
+          </Link>
         </Button>
       </div>
       {subtitle && (

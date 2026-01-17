@@ -125,8 +125,14 @@ export default function Portfolio() {
 
         {/* Bottom CTA */}
         <CTASection
-          primaryLabel="View All Work"
-          secondaryLabel="Commission a Shoot"
+          primary={{
+            label: "View All Work",
+            url: "#",
+          }}
+          secondary={{
+            label: "Commission a Shoot",
+            url: "#contact",
+          }}
           subtitle="Available for worldwide assignments"
           primaryVariant="outline"
           secondaryVariant="default"

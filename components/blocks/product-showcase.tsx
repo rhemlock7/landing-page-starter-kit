@@ -1,11 +1,12 @@
 import AudioPlayer from "../custom/audio-player";
 import CTASection from "../custom/cta-section";
+import DETAILS from "@/DETAILS.json";
 
-export default function ProductShowcase() {
-  
+export default function ProductShowcase({ className }: { className?: string }) {
+
 
   return (
-    <section className="relative w-full py-32 px-6 overflow-hidden">
+    <section className={`relative w-full px-6 overflow-hidden ${!!className ? className : "py-24"}`}>
       {/* Background accents */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 blur-3xl rounded-full" />
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/3 blur-3xl rounded-full" />
@@ -59,8 +60,8 @@ export default function ProductShowcase() {
 
         {/* CTA */}
         <CTASection
-          primaryLabel="Get the Full Course"
-          secondaryLabel="Learn More"
+          primary={{ label: "Get Started", url: DETAILS.stripeUrl }}
+          secondary={{ label: "Learn More", url: "#learn-more" }}
           subtitle="Join thousands of women on their journey"
         />
       </div>

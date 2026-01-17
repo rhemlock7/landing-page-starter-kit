@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import NavCTAButton from "../custom/nav-cta-button";
 
 const navLinks = [
   { href: "#portfolio", label: "Portfolio" },
@@ -34,9 +34,7 @@ export default function Navbar() {
           </div> */}
 
           {/* CTA */}
-          <Button size="sm" className="tracking-widest text-xs">
-            Book Now
-          </Button>
+          <NavCTAButton />
         </div>
       </div>
     </nav>

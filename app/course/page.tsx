@@ -1,11 +1,14 @@
 import ProductShowcase from "@/components/blocks/product-showcase";
 import { Button } from "@/components/ui/button";
+import CTASection from "@/components/custom/cta-section";
+import Link from "next/link";
+import DETAILS from "@/DETAILS.json";
 
 export default function CoursePage() {
   return (
     <main className="pt-20">
       {/* Hero Section - Product Showcase */}
-      <ProductShowcase />
+      <ProductShowcase className="pt-16 pb-32" />
 
       {/* Course Details Section */}
       <section className="relative w-full py-24 px-6 bg-muted/30">
@@ -135,7 +138,9 @@ export default function CoursePage() {
             </ul>
 
             <Button size="lg" className="min-w-64 tracking-widest">
-              Begin Your Journey
+              <Link href={DETAILS.stripeUrl} target="_blank" rel="noopener noreferrer">
+                Begin Your Journey
+              </Link>
             </Button>
 
             <p className="text-muted-foreground/60 text-xs tracking-wider mt-6">
@@ -158,18 +163,18 @@ export default function CoursePage() {
             starts today.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
-            <Button size="lg" className="min-w-52 tracking-widest">
-              Get Instant Access
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="min-w-52 tracking-widest"
-            >
-              Have Questions?
-            </Button>
-          </div>
+          <CTASection
+            primary={{
+              label: "Get Instant Access",
+              url: DETAILS.stripeUrl,
+              targetBlank: true,
+            }}
+            secondary={{
+              label: "Have Questions?",
+              url: "#contact",
+            }}
+            className="mb-8"
+          />
 
           <p className="text-muted-foreground/60 text-xs tracking-widest uppercase">
             Secure checkout • Instant access • Lifetime updates

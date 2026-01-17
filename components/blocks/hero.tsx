@@ -1,4 +1,3 @@
-import React from "react";
 import CTASection from "../custom/cta-section";
 
 export default function Hero() {
@@ -49,8 +48,8 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <CTASection
-          primaryLabel="View Portfolio"
-          secondaryLabel="Book a Session"
+          primary={{ label: "View Portfolio", url: "#portfolio" }}
+          secondary={{ label: "Book a Session", url: "#contact" }}
           subtitle="Editorial · Portraits · Weddings · Commercial"
           buttonClassName="min-w-[200px]"
         />
