@@ -41,7 +41,7 @@ export default function Footer() {
     <footer className="w-full border-t border-border">
       <div className="max-w-7xl mx-auto px-6">
         {/* Main footer content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        <div className="py-16 flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
           {/* Brand */}
           <div>
             <Link href="/" className="inline-block mb-6">
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          {/* <div>
             <h4 className="text-primary text-xs tracking-[0.3em] uppercase mb-6">
               Get in Touch
             </h4>
@@ -67,7 +67,7 @@ export default function Footer() {
                 Available for travel
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Social */}
           <div>

@@ -21,7 +21,7 @@ export default function Navbar() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-10">
+          {/* <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -31,7 +31,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA */}
           <Button size="sm" className="tracking-widest text-xs">
